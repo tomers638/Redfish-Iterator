@@ -117,10 +117,7 @@ def main():
 
     # Scan the service
     response_times = {}
-    scan_resource( redfish_obj, args, response_times, "/redfish" )
-    scan_resource( redfish_obj, args, response_times, "/redfish/v1/odata" )
-    scan_resource( redfish_obj, args, response_times, "/redfish/v1/$metadata", is_csdl = True )
-    scan_resource( redfish_obj, args, response_times, "/redfish/v1" )
+    scan_resource( redfish_obj, args, response_times, "/redfish/v1/Chassis" )
     redfish_obj.logout()
 
     # Add time statistics to the readme
